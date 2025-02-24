@@ -8,11 +8,19 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "header-gradient":
+          "linear-gradient(to bottom, #110f23 100%, transparent 50%)",
+      },
+      fontFamily: {
+        inter: ["var(--font-inter)", "sans-serif"],
+        caveat: ["var(--font-caveat)", "cursive"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        secondary: "#5F44EC",
+        green: "#48934D",
       },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 } satisfies Config;
