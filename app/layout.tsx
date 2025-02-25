@@ -16,7 +16,7 @@ const caveat = Caveat({
 });
 
 export const metadata: Metadata = {
-  title: "Fintech Landing Page",
+  title: "Borderless | Transaction made Fun!",
   description:
     "Discover innovative financial solutions with our sleek and user-friendly fintech platform. Secure, efficient, and designed for growth.",
 };
