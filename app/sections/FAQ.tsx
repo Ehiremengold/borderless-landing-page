@@ -1,8 +1,9 @@
+import { faqs } from "../lib/utils";
 const FAQ = () => {
   return (
     <section className="font-inter p-16">
       <div className="flex lg:flex-row flex-col justify-between gap-16 items-center container">
-        <div className="flex flex-col space-y-8 lg:w-full">
+        <div className="flex flex-col space-y-8 lg:w-full lg:justify-start justify-center lg:items-start lg:text-left text-center items-center">
           <span className="font-semibold px-3 py-1 bg-secondary w-fit bg-opacity-15 rounded-lg text-secondary">
             Frequently Asked Questions 🙋‍♀️
           </span>
@@ -17,33 +18,23 @@ const FAQ = () => {
           </button>
         </div>
         <div className="space-y-4 w-full">
-          <div className="collapse collapse-plus bg-white border">
-            <input type="radio" name="my-accordion-3" defaultChecked />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-plus bg-white border">
-            <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
-          <div className="collapse collapse-plus bg-white">
-            <input type="radio" name="my-accordion-3" />
-            <div className="collapse-title text-xl font-medium">
-              Click to open this one and close others
-            </div>
-            <div className="collapse-content">
-              <p>hello</p>
-            </div>
-          </div>
+          {faqs.map((faq, index) => {
+            const {question, response} = faq
+            return (
+              <div
+                key={index}
+                className="collapse collapse-plus bg-white border"
+              >
+                <input type="radio" name="my-accordion-3" />
+                <div className="collapse-title text-base font-medium text-black">
+                  {question}
+                </div>
+                <div className="collapse-content">
+                  <p className="text-slate-800 font-light">{response}</p>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

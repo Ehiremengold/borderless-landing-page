@@ -66,7 +66,7 @@ const Header = () => {
           })}
         </ul>
       </nav>
-      {/* <Hero /> */}
+      <Hero />
     </header>
   );
 };
