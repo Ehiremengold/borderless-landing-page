@@ -20,13 +20,13 @@ const Hero = () => {
     },
   };
   return (
-    <div className="mt-10 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="mt-28 max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
         <motion.div variants={textVariants} initial="hidden" animate="visible">
           <h1 className="text-4xl font-bold sm:text-5xl lg:text-6xl lg:leading-tight dark:text-white sm:text-left text-center">
             Sending money{" "}
             <span className="text-[#FED449] font-caveat">abroad&nbsp;</span>{" "}
-            just got cooler!
+            just got exciting!
           </h1>
           <p className="md:mt-6 mt-3 sm:text-xl text-base text-slate-300 sm:text-left text-center">
             Hey there world traveler! It’s time for you globetrotters to rejoice

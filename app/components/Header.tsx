@@ -23,7 +23,7 @@ const Header = () => {
   };
 
   return (
-    <header className="h-3/4 bg-header-gradient pt-14 pb-20">
+    <header className="h-auto bg-header-gradient pt-14 pb-20">
       <nav className="bg-white rounded-xl p-4 w-11/12 sm:w-4/5 mx-auto flex items-center justify-between">
         <div>
           <Image src={logo} alt="logo" />
