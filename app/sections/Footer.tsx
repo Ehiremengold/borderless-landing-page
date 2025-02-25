@@ -27,7 +27,7 @@ const itemVariants = {
 
 const Footer = () => {
   return (
-    <section className="font-inter p-16 relative w-full bg-gradient-to-b from-[#0d0b2e] to-[#2a1a50]">
+    <section className="font-inter p-10 md:p-16 relative w-full bg-gradient-to-b from-[#0d0b2e] to-[#2a1a50]">
       
       <motion.div
         className="container place-items-start grid grid-cols-2 md:grid-cols-4 md:gap-10"

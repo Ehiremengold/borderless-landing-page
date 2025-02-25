@@ -5,11 +5,13 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    'node_modules/preline/dist/*.js',
+    "node_modules/preline/dist/*.js",
   ],
   theme: {
     extend: {
       backgroundImage: {
+        // "header-gradient":
+        //   "linear-gradient(to bottom, #1e1b34 0%, #2a2740 50%, transparent 100%)",
         "header-gradient":
           "linear-gradient(to bottom, #110f23 100%, transparent 50%)",
       },

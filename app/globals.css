@@ -9,8 +9,8 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 1440px;
-  max-width: 100%;
+  width: 1560px;
+  /* max-width: 100%; */
   box-sizing: border-box;
   margin: 0;
   padding: 0;

@@ -23,7 +23,7 @@ const imageVariants = {
 
 const Covered = () => {
   return (
-    <section className="font-inter p-16 bg-[#fffbee]">
+    <section className="font-inter p-5 md:p-16 bg-[#fffbee]">
       <div className="flex md:flex-row flex-col justify-between gap-10 items-center container">
         
         <motion.div

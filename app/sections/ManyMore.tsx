@@ -11,7 +11,7 @@ const cardVariants = {
 
 const ManyMore = () => {
   return (
-    <section className="font-inter p-16 bg-[#0E0926]">
+    <section className="font-inter pt-16 pr-5 pl-5 pb-5 md:p-16 bg-[#0E0926]">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

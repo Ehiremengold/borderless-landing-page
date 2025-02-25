@@ -30,7 +30,7 @@ const itemVariants = {
 
 const Future = () => {
   return (
-    <section className="font-inter pt-16 pl-16 pr-16 bg-[#556AF0]">
+    <section className="font-inter pt-16 pl-5 pr-5 md:pl-16 md:pr-16 bg-[#556AF0]">
       <motion.div
         className="container flex lg:justify-between justify-center lg:flex-nowrap flex-wrap gap-6 items-center"
         initial="hidden"

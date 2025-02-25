@@ -27,7 +27,7 @@ const textVariants = {
 
 const Download = () => {
   return (
-    <section className="p-10 font-inter">
+    <section className="p-5 sm:p-10 font-inter">
       <div className="flex lg:flex-nowrap flex-wrap-reverse items-center justify-center gap-16 container">
         
         {/* Animated Image */}
@@ -53,7 +53,7 @@ const Download = () => {
             Start sending money💸
           </motion.span>
           <motion.h1
-            className="font-bold text-4xl lg:text-6xl text-black"
+            className="font-bold text-3xl lg:text-6xl text-black"
             variants={textVariants}
             initial="hidden"
             whileInView="visible"

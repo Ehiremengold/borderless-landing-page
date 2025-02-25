@@ -29,7 +29,7 @@ const faqVariants = {
 
 const FAQ = () => {
   return (
-    <section className="font-inter p-16">
+    <section className="font-inter pt-16 pl-5 pr-5 pb-5 md:p-16">
       <div className="flex lg:flex-row flex-col justify-between gap-16 items-center container">
         
         {/* Animated Left Text Section */}

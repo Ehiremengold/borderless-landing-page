@@ -31,7 +31,7 @@ const featureVariants = {
 
 const Features = () => {
   return (
-    <section className="p-10 font-inter">
+    <section className="p-5 md:p-10 font-inter">
       
       {/* Animated Header Section */}
       <motion.div
