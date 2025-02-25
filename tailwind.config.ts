@@ -5,6 +5,7 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    'node_modules/preline/dist/*.js',
   ],
   theme: {
     extend: {
@@ -22,14 +23,14 @@ export default {
       },
       keyframes: {
         scroll: {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-100%)' },
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-100%)" },
         },
       },
       animation: {
-        scroll: 'scroll 20s linear infinite',
+        scroll: "scroll 20s linear infinite",
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require("preline/plugin")],
 } satisfies Config;

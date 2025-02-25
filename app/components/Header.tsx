@@ -4,6 +4,7 @@ import logo from "@/public/assets/icons/logo.png";
 import menuIcon from "@/public/assets/icons/menu.png";
 import { useState, useEffect } from "react";
 import Hero from "./Hero";
+import { motion } from "framer-motion";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -16,6 +17,11 @@ const Header = () => {
     }
   }, [menu]);
 
+  const navItemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  };
+
   return (
     <header className="h-3/4 bg-header-gradient pt-14 pb-20">
       <nav className="bg-white rounded-xl p-4 w-11/12 sm:w-4/5 mx-auto flex items-center justify-between">
@@ -25,9 +31,16 @@ const Header = () => {
         <ul className="md:flex hidden gap-8 font-semibold">
           {["Home", "Features", "Pricing", "Help"].map((item, index) => {
             return (
-              <li key={index} className={`${index !== 0 ? "text-black" : "text-slate-500" }`}>
+              <motion.li
+                key={index}
+                className={`${index !== 0 ? "text-black" : "text-slate-500"}`}
+                variants={navItemVariants}
+                initial="hidden"
+                animate="visible"
+                transition={{ delay: index * 0.2 }}
+              >
                 {item}
-              </li>
+              </motion.li>
             );
           })}
         </ul>
@@ -46,10 +59,13 @@ const Header = () => {
         </div>
       </nav>
       {/* mobile nav */}
-      <nav
-        className={`z-50 ${
+      <motion.nav
+        className={`z-50 fixed bg-white h-1/2 w-3/4 top-40 right-5 rounded-lg ${
           menu ? "opacity-100 translate-x-0" : "opacity-0 translate-x-96"
-        } transition-all ease-in-out duration-300 fixed bg-white h-1/2 w-3/4 top-40 right-5 rounded-lg`}
+        } transition-all ease-in-out duration-300`}
+        initial={{ x: "100%" }}
+        animate={{ x: menu ? "0%" : "100%" }}
+        transition={{ duration: 0.3 }}
       >
         <ul className="flex flex-col justify-center items-center h-full place-items-center gap-8 font-semibold">
           {["Home", "Features", "Pricing", "Help"].map((item, index) => {
@@ -65,7 +81,7 @@ const Header = () => {
             );
           })}
         </ul>
-      </nav>
+      </motion.nav>
       <Hero />
     </header>
   );

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { Inter, Caveat } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
-  weight: ["200","300","400", "500", "600", "700", "800", "900"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-inter",
 });
 
@@ -26,8 +27,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="bg-white">
-      <body className={`${inter.variable} ${caveat.variable} antialiased bg-white`}>
+      <body
+        className={`${inter.variable} ${caveat.variable} antialiased bg-white`}
+      >
         {children}
+        <Script
+          src="./node_modules/preline/dist/preline.js"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
