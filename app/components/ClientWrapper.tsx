@@ -2,38 +2,38 @@
 
 import dynamic from "next/dynamic";
 
-// Dynamically import the Download component
+
 const Download = dynamic(() => import("@/app/sections/Download"), {
-  ssr: false, // Only load on the client side
+  ssr: false, 
 });
 
-// Dynamically import the Download component
+
 const Covered = dynamic(() => import("@/app/sections/Covered"), {
-  ssr: false, // Only load on the client side
+  ssr: false, 
 });
 
 const Features = dynamic(() => import("@/app/sections/Features"), {
-  ssr: false, // Only load on the client side
+  ssr: false, 
 });
 
 const ManyMore = dynamic(() => import("@/app/sections/ManyMore"), {
-  ssr: false, // Only load on the client sid
+  ssr: false, 
 });
 
 
 const FAQ = dynamic(() => import("@/app/sections/FAQ"), {
-  ssr: false, // Only load on the client sid
+  ssr: false, 
 });
 
 
 const Future = dynamic(() => import("@/app/sections/Future"), {
-  ssr: false, // Only load on the client sid
+  ssr: false,
 });
 
 
 
 const Footer = dynamic(() => import("@/app/sections/Footer"), {
-  ssr: false, // Only load on the client sid
+  ssr: false, 
 });
 
 
